@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sentiment based Recommendation System</title>
+</head>
+
+<body>
+ <div class="login">
+ <center><h1>Recommendation System</h1></center>
+  
+     <!-- Define a form to take input from user -->
+        <form action="{{ url_for('predict')}}" method="post">
+        <center><label for="UN">Enter A valid Username below:</label></center>
+        <br>
+        <center><input type="text" name="Username" required="required" /></center>
+        <br>
+        <center><button type="submit">Get product Recommendation</button></center>
+    </form>
+
+   <br>
+   
+    <center>{{ OUTPUT|safe }}</center>
+
+ </div>
+
+
+</body>
+</html>
